@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SensorActivity"
+    android:fillViewport="true">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <com.mikhaellopez.circularprogressbar.CircularProgressBar
+            android:id="@+id/circularProgressBar"
+            android:layout_width="275dp"
+            android:layout_marginTop="50dp"
+            android:layout_height="275dp"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            app:cpb_background_progressbar_color="#b6bbd8"
+            app:cpb_background_progressbar_width="5dp"
+            app:cpb_progress_direction="to_right"
+            app:cpb_progress_max="25000"
+            app:cpb_progressbar_color="#42A5F5"
+            app:cpb_progressbar_width="10dp"
+            app:cpb_round_border="true"
+            app:layout_constraintTop_toBottomOf="@id/labelLat"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/buttonStart"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <TextView
+            android:id="@+id/textLightValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Hello World!"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/circularProgressBar"
+            app:layout_constraintEnd_toEndOf="@+id/circularProgressBar"
+            app:layout_constraintStart_toStartOf="@+id/circularProgressBar"
+            app:layout_constraintTop_toTopOf="@+id/circularProgressBar" />
+
+        <TextView
+            android:id="@+id/labelFrequency"
+            android:padding="5dp"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:text="Capture Frequency"
+            android:textSize="16sp"
+            android:textAlignment="textEnd"
+            app:layout_constraintBottom_toTopOf="@+id/labelLong"
+            app:layout_constraintEnd_toStartOf="@+id/barrier"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/labelSensorType"
+            />
+
+        <TextView
+            android:id="@+id/textFrequency"
+            android:layout_width="0dp"
+            android:textSize="16sp"
+            android:layout_height="wrap_content"
+            android:editable="false"
+            android:layout_margin="20dp"
+            android:ems="10"
+            app:layout_constraintBaseline_toBaselineOf="@+id/labelFrequency"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/barrier" />
+
+        <TextView
+            android:id="@+id/labelSensorType"
+            android:padding="5dp"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:text="Sensor type"
+            android:textSize="16sp"
+            android:textAlignment="textEnd"
+            app:layout_constraintBottom_toTopOf="@+id/labelFrequency"
+            app:layout_constraintEnd_toStartOf="@+id/barrier"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            />
+
+
+
+        <TextView
+            android:id="@+id/labelLong"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:text="Long"
+            android:padding="5dp"
+            android:textSize="16sp"
+            android:textAlignment="textEnd"
+            app:layout_constraintBottom_toTopOf="@+id/labelLat"
+            app:layout_constraintEnd_toStartOf="@+id/barrier"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/labelFrequency"
+            app:layout_constraintWidth_percent="0.35" />
+
+        <TextView
+            android:id="@+id/labelLat"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:text="Lat"
+            android:padding="5dp"
+            android:textSize="16sp"
+            android:textAlignment="textEnd"
+            app:layout_constraintBottom_toTopOf="@id/circularProgressBar"
+            app:layout_constraintEnd_toStartOf="@+id/barrier"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/labelLong"
+            app:layout_constraintWidth_percent="0.35" />
+
+
+
+
+        <TextView
+            android:id="@+id/textType"
+            android:layout_width="0dp"
+            android:textSize="16sp"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            app:flow_horizontalAlign="center"
+            app:layout_constraintBaseline_toBaselineOf="@+id/labelSensorType"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/barrier"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/textLong"
+            android:layout_width="0dp"
+            android:editable="false"
+            android:textSize="16sp"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:ems="10"
+
+            app:layout_constraintBaseline_toBaselineOf="@+id/labelLong"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/barrier" />
+
+        <TextView
+            android:id="@+id/textLat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:editable="false"
+            android:textSize="16sp"
+            android:layout_margin="20dp"
+            android:ems="10"
+            app:layout_constraintBaseline_toBaselineOf="@+id/labelLat"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/barrier" />
+
+
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="right"
+            app:constraint_referenced_ids="labelLat,labelLong,labelSensorType"
+            tools:layout_editor_absoluteX="300dp" />
+        <Button
+            android:id="@+id/buttonStart"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/my_button"
+            android:text="Start"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/circularProgressBar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
