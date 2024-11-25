@@ -1,7 +1,7 @@
 ## Android app for collecting light sensor data using the MQTT protocol
 
 This app allows users to use their phone as a light sensor that periodically collects and publishes the location/time/sensor data using the MQTT protocol. <br />
-![Screenshot_2024-11-25-12-32-24-989_com example lightsensorapp](https://github.com/user-attachments/assets/fb6caa64-2160-432d-82ff-b6b3f2b91609)
+![Screenshot_2024-11-25-12-32-24-989_com example lightsensorapp](https://github.com/user-attachments/assets/fb6caa64-2160-432d-82ff-b6b3f2b91609 | width=100)
 ![Screenshot_2024-11-25-12-32-09-873_com example lightsensorapp](https://github.com/user-attachments/assets/df3cebd0-0bfb-47a8-9faa-866c2b1f7528)
 
 <br />The application requires location permissions to collect the current longitude and latitude of the user. Users can also use simulation mode and select the desired sensor data range, frequency and location in the settings. 
